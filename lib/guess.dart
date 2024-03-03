@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:guess_the_number/button.dart';
 
 class Guess extends StatefulWidget {
   const Guess({super.key});
@@ -15,6 +16,12 @@ class _Guess extends State<Guess> {
   var showfirst = false;
   var activeGuess = "assets/images/guess.png";
   var guessNumber = Random().nextInt(6) + 1;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   void onPressedd() {
     setState(() {
@@ -34,21 +41,10 @@ class _Guess extends State<Guess> {
     return Column(
       children: [
         Image.asset(activeGuess),
-        Row(
+        const Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            TextButton(
-              onPressed: onPressedd,
-              style: TextButton.styleFrom(
-                foregroundColor: Colors.black26,
-                backgroundColor: Colors.blue,
-                minimumSize: const Size(50.0, 50.0),
-              ),
-              child: const Text(
-                "+",
-                style: TextStyle(color: Colors.white),
-              ),
-            ),
+            TextButtodn(onPressedd, "+"),
             const SizedBox(
               width: 20,
             ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class TextButtodn extends StatelessWidget {
-  const TextButtodn(this.text, this.onPressed, {super.key});
+  const TextButtodn(this.onPressed, this.text, {super.key});
 
   final String text;
-  final VoidCallback onPressed;
+  final void Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
