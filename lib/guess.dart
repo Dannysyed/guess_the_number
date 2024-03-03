@@ -41,10 +41,10 @@ class _Guess extends State<Guess> {
     return Column(
       children: [
         Image.asset(activeGuess),
-        const Row(
+        Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            TextButtodn(onPressedd, "+"),
+            TextButtodn(onPressed: () {}, text: "+"),
             const SizedBox(
               width: 20,
             ),
